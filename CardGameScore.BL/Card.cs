@@ -7,22 +7,20 @@ namespace CardGameScore.BL
         public CardValue cardValue { get; set; }
         public Suit cardSuit { get; set; }
 
-        public Card(CardValue value,Suit _suit)
+        public Card(CardValue value, Suit _suit)
         {
             cardValue = value;
-           cardSuit = _suit;
+            cardSuit = _suit;
         }
 
         public int GetCardBaseValue()
         {
-            if(cardValue == CardValue.Joker) 
+            if (cardValue == CardValue.Joker)
                 return 0;
 
             return (int)cardValue;
         }
 
-
-        // Returns a string representation of the card combining its value and suit.
         //A string in format "[CardValue][cardSuit]" (e.g. "AceS" or "2H")
         public override string ToString()
         {
